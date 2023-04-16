@@ -1,0 +1,35 @@
+class Animal {
+    
+    // Declare private variables age and name
+    private int age;
+    private String name;
+
+    // Setters are void: Sets age and name parameters and to the given values.
+    void set_data(int a, String b) {
+        age = a;
+        name = b;
+    }
+
+    // Getters method are public of their types: Gets name and age, then return them
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+class Zebra extends Animal {
+    String message_zebra(String str) {
+        str = "The zebra named " + getName() + " is " + getAge() + " years old. The zebra comes from Africa";
+        return str;
+    }
+}
+
+class Dolphin extends Animal {
+    String message_dolphin(String str) {
+        str = "The dolphin named " + getName() + " is " + getAge() + " years old. The dolphin comes from New Zealand";
+        return str;
+    }
+}

@@ -1,0 +1,16 @@
+class Arrays {
+    public static void main(String args[]) {
+
+        int[] myArray = new int[10]; // Declaration and Instantiation of Array with length 10
+
+        for (int i = 0; i < myArray.length; i++) // Iterate through indexes 0-9
+        {
+            myArray[i] = i + 1; // Initialize values to 1-10
+        }
+
+        for (int i = 0; i < myArray.length; i++) {
+            System.out.println("The value at myArray[" + i + "] is: " + myArray[i]);
+            // Printing all values to console
+        }
+    }
+}

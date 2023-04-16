@@ -1,0 +1,26 @@
+class PrintPyramid {
+    public static void test(int rows) {
+        
+        //write the code for making and printing the pyramid here
+        //use " " to add space between # in pyramid  
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("# ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+class HelloWorld {
+    public static void main( String args[] ) {
+        int rows = 5;
+        for (int i = 1; i <= rows; ++i) {
+            for (int j = 1; j <= i; ++j) {
+                System.out.print("# ");
+            }
+            System.out.println();
+        }
+    }
+}

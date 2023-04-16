@@ -1,0 +1,20 @@
+class car {
+
+    public String colour;
+    public car() {};
+    public car(String col) {
+        this.colour = col;
+    }
+    public String getColour() {
+        return this.colour;
+    }
+    public void changeColourToBlue() {
+           this.colour = "Blue";
+    }
+    public static void main(String[] args) {
+        car newCar = new car("Pink");
+        System.out.print("Car colour is: " + newCar.getColour() + "\n");
+        newCar.changeColourToBlue();
+        System.out.print("Car colour is: " + newCar.getColour() + "\n");
+    }
+}

@@ -1,0 +1,45 @@
+class CheckMax {
+
+    //Returns maximum value from Array passed as parameter
+
+    public static int findMaxVal(int[] arr) {
+
+
+
+        int max = arr[0];
+
+
+
+        for (int i = 1; i < arr.length; i++) { //iterate over all the array elements
+
+
+
+            if (arr[i] > max) { //check if current element is greater than the already 
+
+                //stored max value
+
+                max = arr[i]; // if yes then update the max value to current element
+
+            }
+
+        }
+
+        
+
+        return max; //return the maximum value
+
+
+
+    } //end of findMaxValue()
+
+ //end of CheckMax
+
+    public static void main( String args[] ) {
+
+        int array [] = {78, 89, 32, 90, 21};
+
+        System.out.println( "The maximum value in an array is: "+findMaxVal(array));
+
+    }
+
+}

@@ -1,0 +1,13 @@
+class Student{
+  public String name;
+  public int age;
+}
+
+class Undergrad extends Student{
+  String major;
+  public Undergrad(){
+    this.major = "Computer"
+    this.name="John Doe";
+    this.age=50;
+  }
+}

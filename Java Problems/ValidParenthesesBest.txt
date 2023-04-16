@@ -1,0 +1,43 @@
+/**
+Using phoenix13steve solution
+
+Added comments for myself to get a better understanding of this solution
+ */
+
+class Solution {
+    public boolean isValid(String s) {
+        // Hint: Use a stack of characters.
+        // Declare stack
+        Stack<Character> stack = new Stack<Character>();
+
+        // Use foreach loop and convert input string into a character array
+        for (char c : s.toCharArray()) 
+        {
+            // Explain: When you encounter an opening bracket
+            // push the closing bracket to the top of the stack.
+            if (c == '(') 
+            {
+                stack.push(')');
+            }
+
+            else if (c == '{') 
+            {
+                stack.push('}');
+            }
+
+            else if (c == '[') 
+            {
+                stack.push(']');
+            }
+
+            // Explain: If stack is empty 
+            // or the popped value is NOT a matching closing bracket
+			// Then we return false. Otherwise, we continue
+            else if (stack.isEmpty() || stack.pop() != c) 
+            {
+                return false;
+            }
+        }
+        return stack.isEmpty();
+    }
+}

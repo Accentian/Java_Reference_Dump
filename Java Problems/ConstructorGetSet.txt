@@ -1,0 +1,94 @@
+class Pet {
+
+    private static int newID;
+    private int petID;
+    private String petType;
+    private String petName;
+    private int petAge;
+
+    public Pet(String type, String name, int age) {
+        petType = type;
+        petID = newID;
+        petName = name;
+        petAge = age;
+
+        newID = newID + 1;
+    }
+
+    public String getName() {
+        return petName;
+    }
+
+    public static int getNewID() {
+        return newID;
+    }
+
+    public void setName(String new_name) {
+        petName = new_name;
+    }
+
+    public void printPetDetails() {
+        System.out.println("Pet ID: " + petID);
+        System.out.println("Pet Type: " + petType);
+        System.out.println("Pet Name: " + petName);
+        System.out.println("Pet Age: " + petAge);
+    }
+
+}
+
+class PetList {
+    public static void main(String[] args) {
+
+        Pet myDog = new Pet("dog", "Ruffy", 45);
+        myDog.printPetDetails();
+        myDog.setName("Scooby");
+        myDog.printPetDetails();
+
+        Pet newcat = new Pet("cat", "Princess", 2);
+        newcat.printPetDetails();
+    }
+}
+
+
+
+Example explanation
+
+    First we make a class named Pet and declare the public and private members.
+
+    Public members include:
+        Methods: getName, setName and printPetDetails
+
+    Private members include:
+        Variables: petID, petType, petName and petAge
+
+Let’s take a look at all the methods one by one.
+
+getName()
+
+    It simply returns the petName variable, hence allowing the program to access a private variable. This is an example of a getter method.
+
+getNewID()
+
+    It simply returns the newID variable, hence allowing the program to access a private variable. This is also an example of a getter method.
+
+setName(String new_name)
+
+    Since the petName variable is private it cannot be changed directly by the main() method outside of the Pet class as we saw in the last lesson.
+    Hence, we have a setter method which takes a parameter i.e. the new value of the name of the pet and sets the current petName to the new_name.
+
+printPetDetails():
+
+    Displays the various properties within the Pet class i.e the name, age, type and the ID.
+
+main(String[] args)
+
+    Declares two objects myDog and newCat for class Pet.
+
+    Calls a constructor method to create these objects.
+
+    Calls the printPetDetails method to show the values for each variable within object myDog.
+
+    Calls set function to update the value for petName for myDog.
+
+    Calls the get method to show the change for petName.
+

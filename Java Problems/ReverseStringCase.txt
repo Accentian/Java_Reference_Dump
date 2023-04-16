@@ -1,0 +1,51 @@
+class challenge_four {
+
+    public static String test(String x) {
+
+        char[] arr = x.toCharArray();
+
+        String text = "";
+
+        
+
+        for (char i: arr) {
+
+            if (Character.isUpperCase(i)) {
+
+                text = text + Character.toLowerCase(i);
+
+            }
+
+            else if (Character.isLowerCase(i)) {
+
+                text = text + Character.toUpperCase(i);
+
+            }
+
+            else {
+
+                text = text + 1;
+
+            }
+
+        }
+
+
+
+        return text;
+
+    }
+
+    public static void main( String args[] ) {
+
+        String odd = "HelLo";
+
+        String even = "jOhN";
+
+        System.out.println( "Hello:" + test(odd));
+
+        System.out.println( "John:" + test(even));
+
+    }
+
+}

@@ -1,0 +1,67 @@
+class Solution {
+    public boolean isValid(String s) {
+        // Hint: Use a stack of characters.
+        // Create a new Stack for characters
+        Stack<Character> stack = new Stack<Character>();
+        boolean isValid = false;
+
+        // Convert string into character array and use foreach loop to iterate through it
+        for(char c : s.toCharArray()) {
+
+            // Hint: When you encounter an opening bracket, push it to the top of the stack.
+            if (c == '(') {
+                stack.push('(');
+            }
+            else if (c == '{') {
+                stack.push('{');
+            }
+            else if (c == '[') {
+                stack.push('[');
+            }
+
+            // Hint: When you encounter a closing bracket, check if the top of the stack 
+            // was the opening for it. If yes, pop it from the stack. Otherwise, return false.
+
+            // Caution: The full test cases requires proper condition checking 
+            // hence my extensive if-else statements below
+            else if (c == ')') {
+                if (stack.isEmpty()) {
+                    return false;
+                }
+                else if (stack.peek() == '(') {
+                    stack.pop();
+                }
+                else {
+                    return false;
+                }
+            }
+            else if (c == '}') {
+                if (stack.isEmpty()) {
+                    return false;
+                }
+                else if (stack.peek() == '{') {
+                    stack.pop();
+                }
+                else {
+                    return false;
+                }
+            }
+            else if (c == ']') {
+                
+                if (stack.isEmpty()) {
+                    return false;
+                }
+                else if (stack.peek() == '[') {
+                    stack.pop();
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+        // If the stack doesn't have any open or closed brackets, return true
+        // Else, we haven't closed a bracket and thus we return false
+        return stack.isEmpty();
+    }
+    
+}

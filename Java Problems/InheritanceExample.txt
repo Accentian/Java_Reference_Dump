@@ -1,0 +1,48 @@
+class Student {
+    public String name;
+    public int age;
+
+    public void setAge(int a) {
+        age = a;
+    }
+}
+
+class UnderGrad extends Student {
+    public UnderGrad() {
+        this.age = 10;
+        this.name = "John Doe";
+    }
+    public void set_age(int a) {
+        if (a < 50) {
+            age = 0;
+        } else {
+            super.setAge(a);
+        }
+    }
+}
+
+class example {
+    public static void main(String[] args) {
+        UnderGrad one = new UnderGrad();
+        System.out.println("Age without any method called, only constructor: " + one.age);
+        one.set_age(50);
+        System.out.println("Age after set_age(50) is called: " + one.age);
+        one.set_age(10);
+        System.out.println("Age after set_age(10) is called: " + one.age);
+    }
+}
+
+
+
+
+Lines 1 - 8:
+
+    The superclass is declared in these lines. The name of the superclass is set as Student.
+    The class has two variables, name which is of type String and age which is of type int.
+    This class also has a public method called setAge(). This method simply takes in an integer as an argument and sets the age to the given input.
+
+Lines 11 - 21:
+
+    The derived class is declared in these lines. The derived class is given the name UnderGrad and see that on line 11 it extends from the Student class- this indicates that it is a child class of this particular class.
+    This class has a constructor which sets the name of the Undergrad student initially as John Doe and the age is set to 10.
+    The class also has a public method called set_age(). This method is interesting as it uses the keyword super in its body. The method takes in an integer parameter. It then checks that if the parameter is less than 50 then, it sets the age as 0. However, if this is not the case, then it simply calls the setAge() method of the parent class by using the keyword super. We already know what this parent class method does!

@@ -1,0 +1,44 @@
+class car {
+
+    public String colour;
+    public car() {};
+    public car(String col) {
+        this.colour = col;
+    }
+    public String getColour() {
+        return this.colour;
+    }
+    public static void main(String[] args) {
+        car newCar = new car("Pink");
+        System.out.print("Car colour is: " + newCar.getColour() + "\n");
+        setColourBlue(newCar);
+        System.out.print("Car colour is: " + newCar.getColour() + "\n");
+    }
+
+    public static void setColourBlue(car c) {
+        c.colour = "Blue";
+    }
+}
+
+/**
+Line 3: A String colour is created which will store the car colour.
+
+Lines 5-10: Helper methods are created within the class to set and get the car colour.
+
+Lines 11-16:
+
+    A main method creates a new car object and the initial colour of the car is set as Pink.
+
+    The method that returns the car colour is called.
+
+    Then the car colour is set to Blue using an external method which is explained below (line 18-20).
+
+    The car colour is then printed again, to see if the changes within the above-mentioned method are applicable to the actual object.
+
+Lines 18-20
+
+    A new method is declared that takes in the car object as an argument.
+    Then uses the colour String belonging to the car class and modifies its value to Blue.
+    Note that the function does not return anything.
+
+**/

@@ -1,0 +1,8 @@
+class SortArr {
+    public static int[] sortAsc(int[] arr) {
+
+        // your code goes here
+        Arrays.sort(arr);
+        return arr; // change this and return the correct result array
+    }
+}

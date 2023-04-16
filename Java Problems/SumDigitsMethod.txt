@@ -1,0 +1,16 @@
+class SumDigits {
+    public static int sumOfDig(int var) {
+
+        // your code goes here
+        int digit = 0, sum = 0;
+
+        while (var > 0){
+            digit = var % 10; // Get the last digit of the variable
+            sum += digit;
+            var = var / 10; // Update the new value of var
+        }
+
+
+        return sum; // return the resultant sum
+    }
+}

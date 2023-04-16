@@ -1,0 +1,12 @@
+class Test<T> 
+{ 
+    T obj;     // An object of type T is declared 
+    Test(T obj) // parameterized constructor 
+    {  
+      this.obj = obj;  
+    }  
+    public T getObject() // get method
+    { 
+      return this.obj;
+    } 
+}

@@ -1,0 +1,51 @@
+/**
+ * Remember that Fibonacci sequence rule is as follows: 
+ * F(n) = F(n-1) + F(n-2)
+ * 
+ * WHERE 
+ * F(n-1) is the previous term 
+ * 
+ * AND 
+ * F(n-2) is the term before the previous term
+ * 
+ * Note:
+ * If n = 0 or 1, 
+ * Then F0 = 0 or F1 = 1
+ * */
+
+import java.io.*;
+import java.util.*;
+
+class GFG {
+    
+    // Recursive method takes in an integer and returns long
+	static long recFib(final int n) {
+	    
+	    if (n <= 1) {
+	        return n;
+	    }
+	    return recFib(n - 1) + recFib(n - 2);
+	    
+	    /**
+	     * Credit: https://rosettacode.org/wiki/Fibonacci_sequence#Java 
+	     * Condensed expression:
+	     * return (n < 2) ? n : recFib(n - 1) + recFib(n - 2);
+	     * */
+	}
+	
+	public static void main (String[] args) {
+		int n = 0;
+		Scanner userInput = new Scanner(System.in);
+		
+		// Inquires user for an integer input
+	    System.out.println("Enter an integer:");
+	    n = userInput.nextInt();
+	    
+	    System.out.println();
+	    
+	    System.out.println("The n-th Fibonacci Number is:");
+	    System.out.print(recFib(n));
+	}
+	
+	
+}

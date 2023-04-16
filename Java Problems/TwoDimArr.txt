@@ -1,0 +1,31 @@
+class TwoDimArr {
+    public static void printMat(int n) {
+        //write the code for making and printing the matrix here
+        //use can use \n to move numers to next line in the matrix
+        //use " " to add space between numbers in matrix
+        int[][] arr = new int[n][n];
+        
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++){
+                if (i == j) {
+                    arr[i][j] = 0;
+                }
+                else if (i > j) {
+                    arr[i][j] = -1;
+                }
+                else {
+                    arr[i][j] = 1;
+                }
+            }
+        }
+
+        for (int i = 0; i < arr.length; i++) { //print the array
+            for (int j = 0; j < arr.length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println(); //comment out this line when you start writing code
+    }
+}

@@ -1,0 +1,61 @@
+class Pet {
+
+    private static int newID;
+    private int petID;
+    private String petType;
+    private String petName;
+    private int petAge;
+
+    public Pet(String type, String name, int age) {
+        petType = type;
+        petID = newID;
+        petName = name;
+        petAge = age;
+
+        newID = newID + 1;
+    }
+
+    public String getName() {
+        return petType;
+    }
+
+    public static int getNewID() {
+        return newID;
+    }
+
+    public void printPetDetails() {
+        System.out.println("Pet ID: " + petID);
+        System.out.println("Pet Type: " + petType);
+        System.out.println("Pet Name: " + petName);
+        System.out.println("Pet Age: " + petAge);
+    }
+
+}
+
+class PetList {
+    public static void main(String[] args) {
+
+        Pet myDog = new Pet("dog", "Ruffy", 3);
+        myDog.printPetDetails();
+
+        Pet newcat = new Pet("cat", "Princess", 2);
+        newcat.printPetDetails();
+    }
+}
+
+
+For this example we have taken a Pet class. In this class we have five variables:
+
+    petType: This determines the type of animal that the particular pet is
+    petID: This is the identification number given to an individual pet
+    petName: This is the name that the pet will be assigned
+    petAge: This is the integer value of the age of the pet
+    newID: This is a static variable, hence only one copy of this field will exist, no matter how many Pets are created.
+
+An instance of a pet, say, a dog named Ruffy, would be an object. So would a cat named Princess. Hence, you can have multiple instances of a class, just like you can have multiple pets.
+
+Properties, that is the variables defined in the class, are like “inner variables” of each object made of type Pet.
+
+To declare objects of a class we should follow the format on Lines 38 and 41.
+
+We used the dot operator to access members of a class object. See how in the above example, the methods are called in Lines 39 and 41.

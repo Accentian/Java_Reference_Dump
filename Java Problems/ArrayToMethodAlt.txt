@@ -1,0 +1,31 @@
+class ArrayToMethod {
+    public static void main(String args[]) {
+        int[] arr = {
+            1,
+            2,
+            3,
+            4,
+            5
+        }; //initialize
+
+        System.out.println("The Values before calling the method are:");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("arr[" + i + "]= " + arr[i] + "  "); //printing the array before calling method
+        }
+        System.out.println();
+        multiply(arr, 3); //nothing is being returned
+        System.out.println("The Values after calling the method are:");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("arr[" + i + "]= " + arr[i] + "  "); //printing the array after calling method
+
+        }
+
+    } //end of main()
+
+    static void multiply(int[] arr, int num) { //will change the values of passed array
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = arr[i] * num;
+        }
+        //Not returning anything
+    }
+}

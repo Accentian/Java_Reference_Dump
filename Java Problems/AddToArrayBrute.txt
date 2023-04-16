@@ -1,0 +1,69 @@
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+    //   int x=1231;
+    //   int y=25;
+      
+    //   int number = x;
+      
+    //   while(number > 0)
+    //   {
+    //       number = x % 10;
+    //       System.out.println("Breakdown: " + number);
+    //       x = x / 10;
+    //   }
+      
+      int[] num = {9,9,9,9,9,9,9,9,9,9};
+      int size = num.length;
+      //System.out.println("Size: " + size);
+      
+      
+      long k = 1;
+      long numPow = 0;
+      long pow = 0;
+      long total = 0;
+      
+      for(int i = size - 1; i >= 0; i--)
+      {
+          numPow = (long) Math.pow(10, pow);
+          System.out.println("EXP: " + numPow);
+          pow++;
+          
+          total += num[i] * numPow;
+          System.out.println("Total: " + total  + "\n");
+      }
+      
+      total += k;
+      System.out.println("Total + k = " + total);
+      
+      ArrayList<Long> newNum = new ArrayList<>();
+      long number = total;
+      
+      while(total > 0)
+      {
+          number = total % 10;
+          System.out.println("Breakdown: " + number);
+          
+          newNum.add(number);
+          total = total / 10;
+      }
+      
+      System.out.println("The dynamic array is: " + newNum);
+      
+      ArrayList<Long> updateNum = new ArrayList<>();
+      for(int i = newNum.size() - 1; i >= 0; i--) 
+      {
+          updateNum.add(newNum.get(i));
+      }
+      System.out.println("The new dynamic array is: " + updateNum);
+      
+      if(updateNum.get(0) == 0)
+      {
+          updateNum.remove(0);
+      }
+      
+      System.out.println("The new dynamic array is: " + updateNum);
+      
+    }
+}
